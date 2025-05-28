@@ -1,0 +1,9 @@
+name: dart_crash_course
+description: A simple Dart project
+version: 1.0.0
+
+environment:
+  sdk: ">=3.8.0"
+
+dependencies:
+  http: ^0.13.0
