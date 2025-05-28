@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dart Crash Course - Upgrade Yourself</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/tutorial.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Dart Crash Course</h1>
+      <p>A comprehensive introduction to Dart programming language</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tutorial-nav">
+      <a href="../../index.html">Home</a> /
+      <a href="../../tutorials.html?source=net_ninja">Net Ninja Tutorials</a> /
+      <span>Dart Crash Course</span>
+    </div>
+
+    <section class="tutorial-content">
+      <h2>Course Overview</h2>
+      <p>This crash course covers all the essential concepts of the Dart programming language, from basic syntax to
+        advanced features like asynchronous programming and HTTP requests.</p>
+
+      <h3>Course Contents</h3>
+      <ul class="content-list">
+        <li><strong>Basics</strong>: Variables, constants, and string interpolation</li>
+        <li><strong>Types</strong>: String, int, bool, double, and nullable types</li>
+        <li><strong>Lists & Sets</strong>: Collection types and operations</li>
+        <li><strong>Maps</strong>: Key-value pair collections</li>
+        <li><strong>Control Flow</strong>: Loops, conditionals, and filtering</li>
+        <li><strong>Functions</strong>: Positional and named parameters</li>
+        <li><strong>Classes</strong>: Object-oriented programming fundamentals</li>
+        <li><strong>Inheritance</strong>: Extending classes</li>
+        <li><strong>Method Overriding</strong>: Customizing inherited behavior</li>
+        <li><strong>Generics</strong>: Type-safe collections</li>
+        <li><strong>Async Programming</strong>: Futures and async/await</li>
+        <li><strong>HTTP Requests</strong>: Fetching data from APIs</li>
+      </ul>
+
+      <h3>Code Examples</h3>
+      <div class="code-examples">
+        <div class="code-example">
+          <h4>Hello World</h4>
+          <pre><code>void main() {
+  print("hello world!");
+}</code></pre>
+        </div>
+
+        <div class="code-example">
+          <h4>Async/Await Example</h4>
+          <pre><code>void main() async {
+  final post = await fetchPost();
+  print(post.title);
+  print(post.userId);
+}
+
+Future&lt;Post&gt; fetchPost() {
+  const delay = Duration(seconds: 3);
+  return Future.delayed(delay, () {
+    return Post("my post", 123);
+  });
+}
+
+class Post {
+  String title;
+  int userId;
+  Post(this.title, this.userId);
+}</code></pre>
+        </div>
+      </div>
+
+      <h3>Getting Started</h3>
+      <ol>
+        <li>Make sure you have Dart SDK installed</li>
+        <li>Clone this repository</li>
+        <li>Navigate to the Dart Crash Course directory</li>
+        <li>Run any example with: <code>dart run filename.dart</code></li>
+      </ol>
+
+      <h3>Dependencies</h3>
+      <p>This course uses the following dependencies:</p>
+      <ul>
+        <li><code>http: ^0.13.0</code> - For making HTTP requests</li>
+      </ul>
+
+      <div class="github-link">
+        <a href="https://github.com/bigalex95/upgrade_yourself/tree/main/Net_Ninja_YtChannel/Dart_Crash_Course"
+          class="btn">View on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Upgrade Yourself. All code examples are available under their respective licenses.</p>
+      <p><a href="../../index.html" style="color: white;">Back to Home</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+{
+  "resource_types": [
+    {
+      "id": "net_ninja",
+      "name": "The Net Ninja",
+      "type": "youtube_channel",
+      "url": "https://www.youtube.com/c/TheNetNinja",
+      "description": "Tutorials from The Net Ninja YouTube channel covering various web development technologies",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "google_dev",
+      "name": "Google Developers",
+      "type": "documentation",
+      "url": "https://developers.google.com/",
+      "description": "Official documentation and tutorials from Google Developers",
+      "color": "#4285F4"
+    },
+    {
+      "id": "tech_books",
+      "name": "Programming Books",
+      "type": "book",
+      "description": "Code examples and notes from programming books",
+      "color": "#e67e22"
+    },
+    {
+      "id": "dev_blogs",
+      "name": "Developer Blogs",
+      "type": "blog",
+      "description": "Tutorials and articles from developer blogs",
+      "color": "#1abc9c"
+    }
+  ],
+  "programming_languages": [
+    {
+      "id": "dart",
+      "name": "Dart",
+      "color": "#0175C2"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "color": "#f7df1e"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "color": "#3776AB"
+    }
+  ]
+}

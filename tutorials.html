@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials - Upgrade Yourself</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Upgrade Yourself</h1>
+      <p>A collection of programming tutorials from various sources</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tutorial-nav">
+      <a href="index.html">Home</a> /
+      <span id="current-section">Tutorials</span>
+    </div>
+
+    <section id="net_ninja" class="tutorial-section">
+      <h2>The Net Ninja Tutorials</h2>
+      <div class="tutorial-card">
+        <h3>Dart Crash Course</h3>
+        <p>A comprehensive introduction to Dart programming language basics.</p>
+        <p>Learn about variables, types, collections, control flow, functions, classes, inheritance, generics, and
+          asynchronous programming.</p>
+        <a href="Net_Ninja_YtChannel/Dart_Crash_Course/" class="btn">View Tutorial</a>
+        <div class="tags">
+          <span class="tag youtube">YouTube</span>
+          <span class="tag net-ninja">Net Ninja</span>
+          <span class="tag dart">Dart</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="google_dev" class="tutorial-section" style="display:none;">
+      <h2>Google Developers Tutorials</h2>
+      <p>Coming soon...</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Upgrade Yourself. All code examples are available under their respective licenses.</p>
+      <p><a href="index.html" style="color: white;">Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple script to show relevant tutorials based on URL parameter
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const source = urlParams.get('source');
+
+      if (source) {
+        // Hide all sections first
+        document.querySelectorAll('.tutorial-section').forEach(section => {
+          section.style.display = 'none';
+        });
+
+        // Show the requested section
+        const targetSection = document.getElementById(source);
+        if (targetSection) {
+          targetSection.style.display = 'block';
+
+          // Update the navigation breadcrumb
+          const currentSection = document.getElementById('current-section');
+          if (currentSection) {
+            if (source === 'net_ninja') {
+              currentSection.textContent = 'Net Ninja Tutorials';
+            } else if (source === 'google_dev') {
+              currentSection.textContent = 'Google Developers Tutorials';
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

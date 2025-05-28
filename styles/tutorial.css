@@ -1,0 +1,59 @@
+.tutorial-nav {
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.tutorial-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-list {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-list li {
+  margin-bottom: 0.5rem;
+}
+
+.code-examples {
+  margin: 2rem 0;
+}
+
+.code-example {
+  margin-bottom: 2rem;
+}
+
+.code-example h4 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.github-link {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+ol {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+}
