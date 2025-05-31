@@ -1,0 +1,26 @@
+# Dart & Flutter
+.dart_tool/
+.packages
+build/
+
+# Android
+android/captures/
+android/**/build/
+android/**/.gradle/
+android/**/local.properties
+android/.idea/
+
+# iOS
+ios/Pods/
+ios/DerivedData/
+ios/.symlinks/
+ios/Flutter/ephemeral/
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# OS-generated files
+.DS_Store
+*.swp
+*~
