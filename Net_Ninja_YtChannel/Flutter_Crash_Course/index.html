@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flutter Crash Course - Upgrade Yourself</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/tutorial.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Flutter Crash Course</h1>
+      <p>A beginner-friendly introduction to Flutter app development</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tutorial-nav">
+      <a href="../../index.html">Home</a> /
+      <a href="../../tutorials.html?source=net_ninja">Net Ninja Tutorials</a> /
+      <span>Flutter Crash Course</span>
+    </div>
+
+    <section class="tutorial-content">
+      <h2>Course Overview</h2>
+      <p>This crash course covers the fundamentals of Flutter development, from basic widgets to creating a complete coffee ordering app.</p>
+
+      <h3>What You'll Learn</h3>
+      <ul>
+        <li><strong>Setup</strong>: Installing Flutter and setting up your development environment</li>
+        <li><strong>Widgets</strong>: Understanding the building blocks of Flutter UI</li>
+        <li><strong>Layouts</strong>: Structuring your app's interface</li>
+        <li><strong>State Management</strong>: Handling app state and user interactions</li>
+        <li><strong>Navigation</strong>: Moving between screens</li>
+        <li><strong>Assets</strong>: Working with images and other resources</li>
+        <li><strong>Theming</strong>: Customizing your app's appearance</li>
+      </ul>
+
+      <h3>Projects</h3>
+      <div class="projects">
+        <div class="project-card">
+          <h4>Coffee Card App</h4>
+          <p>A simple coffee ordering app demonstrating core Flutter concepts.</p>
+          <a href="coffee_card/" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <h3>Code Examples</h3>
+      <div class="code-examples">
+        <div class="code-example">
+          <h4>Basic Flutter App</h4>
+          <pre><code>import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}</code></pre>
+        </div>
+      </div>
+
+      <h3>Getting Started</h3>
+      <ol>
+        <li>Make sure you have Flutter SDK installed</li>
+        <li>Clone this repository</li>
+        <li>Navigate to a project directory (e.g., <code>coffee_card</code>)</li>
+        <li>Run <code>flutter pub get</code> to install dependencies</li>
+        <li>Run <code>flutter run</code> to start the app</li>
+      </ol>
+
+      <div class="github-link">
+        <a href="https://github.com/bigalex95/upgrade_yourself/tree/main/Net_Ninja_YtChannel/Flutter_Crash_Course" class="btn">View on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Upgrade Yourself. All code examples are available under their respective licenses.</p>
+    </div>
+  </footer>
+</body>
+</html>

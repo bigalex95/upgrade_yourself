@@ -46,6 +46,11 @@
       "id": "python",
       "name": "Python",
       "color": "#3776AB"
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "color": "#02569B"
     }
   ]
 }

@@ -16,6 +16,7 @@ This repository is organized by content source:
 Currently available tutorials:
 
 - [Dart Crash Course](/Net_Ninja_YtChannel/Dart_Crash_Course/) - A comprehensive introduction to Dart programming language
+- [Flutter Crash Course](/Net_Ninja_YtChannel/Flutter_Crash_Course/) - A beginner-friendly introduction to Flutter app development
 
 ## Contributing
 

@@ -139,6 +139,10 @@ header h1 {
   background: #0175c2;
 }
 
+.tag.flutter {
+  background: #02569b;
+}
+
 section {
   margin: 2rem 0;
 }
