@@ -1,8 +1,12 @@
 # IDE-specific files
 .idea/
 .vscode/
+.continue/
 
 # OS-generated files
 .DS_Store
 *.swp
 *~
+
+# Temporary files
+tmp/
