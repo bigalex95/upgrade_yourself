@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can Place Flowers - LeetCode Solution</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/tutorial.css">
+  <link rel="stylesheet" href="../../styles/prism.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>605. Can Place Flowers</h1>
+      <p>LeetCode Easy Problem</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tutorial-nav">
+      <a href="../../index.html">Home</a> /
+      <a href="../index.html">LeetCode Solutions</a> /
+      <a href="index.html">LeetCode 75</a> /
+      <span id="current-section">Can Place Flowers</span>
+    </div>
+
+    <section class="tutorial-section">
+      <h2>Problem Description</h2>
+      <p>You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.</p>
+      <p>Given an integer array <code>flowerbed</code> containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer <code>n</code>, return true if <code>n</code> new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.</p>
+      
+      <h3>Example 1:</h3>
+      <pre><code>Input: flowerbed = [1,0,0,0,1], n = 1
+Output: true</code></pre>
+
+      <h3>Example 2:</h3>
+      <pre><code>Input: flowerbed = [1,0,0,0,1], n = 2
+Output: false</code></pre>
+
+      <h2>Solution</h2>
+      <div class="code-examples">
+        <div class="code-example">
+          <h3>Greedy Approach</h3>
+          <pre><code class="language-python">class Solution:
+    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+        """
+        Check if n flowers can be planted without violating adjacency rules.
+
+        Uses greedy approach: try to plant flowers from left to right.
+
+        Args:
+            flowerbed: List of 0s and 1s representing empty/occupied plots
+            n: Number of new flowers to plant
+
+        Returns:
+            bool: True if n flowers can be planted, False otherwise
+        """
+        count = 0
+        i = 0
+
+        while i < len(flowerbed):
+            # Check if current position is empty and neighbors are empty (or don't exist)
+            if (
+                flowerbed[i] == 0
+                and (i == 0 or flowerbed[i - 1] == 0)
+                and (i == len(flowerbed) - 1 or flowerbed[i + 1] == 0)
+            ):
+                flowerbed[i] = 1  # Plant flower
+                count += 1
+
+                if count >= n:  # Early termination optimization
+                    return True
+            i += 1
+
+        return count >= n</code></pre>
+        </div>
+      </div>
+      
+      <h2>Explanation</h2>
+      <p>The solution uses a greedy approach to plant flowers from left to right. For each position, we check if it's empty and if its neighbors are also empty (or don't exist in the case of boundary positions). If these conditions are met, we can plant a flower at that position.</p>
+      
+      <p>The key insights are:</p>
+      <ul>
+        <li>We can plant a flower at position i if flowerbed[i] = 0 and both neighbors are 0 (or don't exist)</li>
+        <li>After planting a flower, we update the flowerbed array to reflect this change</li>
+        <li>We keep track of how many flowers we've planted and return true as soon as we reach n</li>
+      </ul>
+      
+      <h3>Time and Space Complexity</h3>
+      <ul>
+        <li><strong>Time Complexity:</strong> O(n) where n is the length of the flowerbed array. We traverse the array at most once.</li>
+        <li><strong>Space Complexity:</strong> O(1) as we only use a constant amount of extra space.</li>
+      </ul>
+      
+      <div class="github-link">
+        <a href="https://github.com/bigalex95/upgrade_yourself/blob/main/leetcode/LeetCode%2075/605_can_place_flowers.py" class="btn">View on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Upgrade Yourself. All code examples are available under their respective licenses.</p>
+      <p><a href="index.html" style="color: white;">Back to LeetCode 75</a></p>
+    </div>
+  </footer>
+
+  <script src="../../scripts/prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Sum - LeetCode Solution</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/tutorial.css">
+  <link rel="stylesheet" href="../../styles/prism.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Two Sum (Problem 1)</h1>
+      <p>LeetCode Easy Problem</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tutorial-nav">
+      <a href="../../index.html">Home</a> /
+      <a href="../index.html">LeetCode Solutions</a> /
+      <a href="index.html">Arrays and Strings</a> /
+      <span id="current-section">Two Sum</span>
+    </div>
+
+    <section class="tutorial-section">
+      <h2>Problem Description</h2>
+      <p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.</p>
+      <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+      <p>You can return the answer in any order.</p>
+      
+      <h3>Example 1:</h3>
+      <pre><code>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].</code></pre>
+
+      <h3>Example 2:</h3>
+      <pre><code>Input: nums = [3,2,4], target = 6
+Output: [1,2]</code></pre>
+
+      <h3>Example 3:</h3>
+      <pre><code>Input: nums = [3,3], target = 6
+Output: [0,1]</code></pre>
+
+      <h3>Constraints:</h3>
+      <ul>
+        <li>2 <= nums.length <= 10<sup>4</sup></li>
+        <li>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></li>
+        <li>-10<sup>9</sup> <= target <= 10<sup>9</sup></li>
+        <li>Only one valid answer exists.</li>
+      </ul>
+      
+      <h2>Solution</h2>
+      <div class="code-examples">
+        <div class="code-example">
+          <h3>Approach 1: Brute Force</h3>
+          <pre><code class="language-python">class Solution:
+    def twoSum(self, nums, target):
+        """
+        Time Complexity: O(n^2)
+        Space Complexity: O(1)
+        """
+        n = len(nums)
+        for i in range(n):
+            for j in range(i + 1, n):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+        return []  # No solution found</code></pre>
+        </div>
+        
+        <div class="code-example">
+          <h3>Approach 2: Hash Table (Optimized)</h3>
+          <pre><code class="language-python">class Solution:
+    def twoSum(self, nums, target):
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+        """
+        num_map = {}  # value -> index
+        
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in num_map:
+                return [num_map[complement], i]
+            num_map[num] = i
+            
+        return []  # No solution found</code></pre>
+        </div>
+      </div>
+      
+      <h2>Explanation</h2>
+      <p>The optimized solution uses a hash table to store the numbers we've seen so far and their indices. For each number, we calculate its complement (target - current number) and check if it exists in our hash table. If it does, we've found our pair and return their indices.</p>
+      
+      <h3>Time and Space Complexity</h3>
+      <ul>
+        <li><strong>Time Complexity:</strong> O(n) where n is the length of the array. We only need to traverse the array once.</li>
+        <li><strong>Space Complexity:</strong> O(n) for storing the hash table in the worst case.</li>
+      </ul>
+      
+      <div class="github-link">
+        <a href="https://github.com/bigalex95/upgrade_yourself/blob/main/leetcode/arrays_strings/two_sum.py" class="btn">View on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Upgrade Yourself. All code examples are available under their respective licenses.</p>
+      <p><a href="index.html" style="color: white;">Back to Arrays and Strings</a></p>
+    </div>
+  </footer>
+
+  <script src="../../scripts/prism.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 # IDE-specific files
 .idea/
-.vscode/
+# .vscode/
 .continue/
 
 # OS-generated files
@@ -10,3 +10,4 @@
 
 # Temporary files
 tmp/
+freeCodeCamp.org_YT/C++_Programming_Course-Beginner2Advanced/
