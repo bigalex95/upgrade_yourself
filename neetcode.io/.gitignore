@@ -1,0 +1,83 @@
+# Build directories
+build/
+.build/
+*.build/
+
+# C++ compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# C++ temporary files
+*.tmp
+*.temp
+*~
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# UV Python package manager
+.python-version
+uv.lock
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Backup files
+*_old.*
+*_backup.*
+*.bak
+*.backup
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Personal notes (optional - uncomment if you want to exclude)
+# notes.md
+# TODO.md
+# personal/
