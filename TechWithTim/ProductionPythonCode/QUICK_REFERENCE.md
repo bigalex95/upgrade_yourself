@@ -1,3 +1,4 @@
+link to youtube video: [How to Write Production Python Code](https://www.youtube.com/watch?v=qU3Rc6_B9es)
 # Quick Reference Guide
 
 ## Design Principles Cheat Sheet
@@ -258,4 +259,5 @@ f.close()  # Might be skipped on error!
 ---
 
 **Keep this guide handy while coding! 📚✨**
+
 
