@@ -12,7 +12,7 @@ neetcode.io/           NeetCode setup (Python + C++, CMake, scripts); only a few
 cpp_interview/         C++ interview prep for CV/edge roles: headers, CMake project, notes (in Russian)
 learning_oreilly/      C++ best-practices exercise
 datacamp/              Supervised learning with scikit-learn notebooks (classification, regression, tuning, pipelines)
-YouTube/               Data cleaning notebook, a Pygame beginner workshop, algorithm notes (codereport/Algorithms as a submodule)
+YouTube/               Data cleaning notebook, a beginner arcade-game workshop, algorithm notes (codereport/Algorithms as a submodule)
 artemshumeiko/         One notebook on Python decorators
 PyQT/, academy_qt/     Small PyQt scripts; academy_qt/Intro-to-QML is a placeholder
 index.html, tutorials.html, styles/, keywords.json   Static GitHub Pages site generated for browsing the material
@@ -23,8 +23,8 @@ index.html, tutorials.html, styles/, keywords.json   Static GitHub Pages site ge
 There is no single entry point; each folder is self-contained.
 
 ```bash
-cd leetcode && python main.py        # or open the individual solution files
-cd datacamp/Supervised_Learning_with_scikit-learn && uv sync   # then open the notebooks
+# solutions are plain scripts and notebooks; open or run them individually
+cd datacamp/Supervised_Learning_with_scikit-learn   # then open the notebooks in Jupyter
 ```
 
 The scikit-learn notebooks use the dataset archive `datacamp-supervisedlearning-scikit-learn-datasets.zip` in that folder; `extract_dataset.py` unpacks it. I did not re-run these notebooks for this cleanup.
