@@ -11,3 +11,13 @@
 # Temporary files
 tmp/
 freeCodeCamp.org_YT/C++_Programming_Course-Beginner2Advanced/
+
+# Build outputs and caches
+__pycache__/
+*.pyc
+build/
+.vscode/
+
+# Generated datasets
+YouTube/Data Cleaning with Python/*.csv
+YouTube/Data Cleaning with Python/*.zip
